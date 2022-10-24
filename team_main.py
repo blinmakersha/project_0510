@@ -1,4 +1,4 @@
-from aditional_func import calculate
+from additional_func import calculate
 
 
 def calculate_two(eq: str):
