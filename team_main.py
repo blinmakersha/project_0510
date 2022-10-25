@@ -22,8 +22,9 @@ print('Добро пожаловать в супер-мега калькулят
     Введите математическое выражение по типу: 2 * 4')
 print("Программа поддерживает только односложные операции.")
 while True:
-    operation = input('Введите выражение: ')
-    print('Ваш ответ: {0}'.format(calculate_two(operation)))
-    print('Историю операций можете посмотреть в файле "calculator.txt"')
-    if input('Для выхода нажмите q: ') == 'q':
+    operation = input('Введите выражение (для выхода введите q): ')
+    if operation == 'q':
         break
+    else:
+        print('Ваш ответ: {0}'.format(calculate_two(operation)))
+        print('Историю операций можете посмотреть в файле "calculator.txt"')
