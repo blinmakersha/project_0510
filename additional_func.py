@@ -14,7 +14,7 @@ def calculate(first, sym, snd):
         try:
             first, snd = int(first), int(snd)
         except ValueError:
-            print("Формат ввода: VALUE1 <+-*/> VALUE2\n\
+            print("Формат ввода: VALUE1 <+-*///> VALUE2\n\
                 Пример: 1 * 2")
         else:
             if sym == '+':
@@ -28,7 +28,13 @@ def calculate(first, sym, snd):
                 return first * snd
             if sym == '/':
                 if snd == 0:
-                    print("It's not okay")
+                    print("Ошибка. Нельзя делить на нуль.")
                 else:
                     newfile.write('{0} / {1} = {2}\n'.format(first, snd, first / snd))
                     return first / snd
+            if sym == '//':
+                if snd == 0:
+                    print("Ошибка. Нельзя делить на нуль.")
+                else:
+                    newfile.write('{0} // {1} = {2}\n'.format(first, snd, first // snd))
+                    return first // snd
